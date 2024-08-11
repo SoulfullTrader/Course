@@ -1,0 +1,1147 @@
+/* Basic Reset */
+body, h1, h2, h3, h4, p, ul, li {
+    margin: 1px;
+    padding: 1px;
+    box-sizing: border-box;
+    /* font-size: medium; */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Animation */
+header {
+    background: #333;
+    color: #fff;
+    padding: -1rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease;
+}
+
+/* header:hover { */
+    /* background: #444; */
+/* } */
+
+/* Header Container */
+.header-container h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    margin-bottom: 0.2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.header-container p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #e97414;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Section Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    text-decoration: underline;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+h3{
+    font-size: 2rem;
+}
+
+/* About Section */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.05);
+}
+
+.about-info {
+    max-width: 600px;
+}
+
+/* Courses Section */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+#courses h2 {
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    text-align: center;
+    margin-bottom: 2rem; /* Adjust the bottom margin for spacing */
+}
+
+.course {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px; /* Adjust width as needed */
+    text-align: center;
+    margin-bottom: 5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.course-thumbnail {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    object-fit: cover; /* Ensure the image covers the container */
+    transition: opacity 0.3s ease;
+}
+
+.course:hover .course-thumbnail {
+    opacity: 0.8;
+}
+
+.course-info {
+    padding: 1rem;
+}
+
+/* Pricing */
+.price {
+    font-size: 1.75rem;
+    margin: 1rem 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.previous-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.current-price {
+    color: #e74c3c;
+}
+
+/* Pay Button */
+.pay-button {
+    background: #050202;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.pay-button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Seats Left */
+.seats-left {
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #ee0000;
+    
+}
+
+/* Reviews */
+.reviews {
+    margin-top: 1rem;
+}
+
+/* Contact Section */
+.contact-details {
+    margin: 0;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-details i {
+    color: #e74c3c;
+    margin-right: 0.5rem;
+}
+
+.contact-details strong {
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* Useful Links */
+.links, .terms-link {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.links h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.links a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* test
+ */
+
+
+
+ .links ul li a {
+    transition: color 0.3s;
+}
+
+.links ul li a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+.reviews {
+    transition: transform 0.3s, color 0.3s;
+}
+
+.reviews:hover {
+    transform: scale(1.02);
+    color: #e74c3c;
+}
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* footer {
+    animation: bounce 0.5s infinite;
+} */
+
+
+.pay-button {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pay-button:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+.course {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth scrolling for navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loader styling */
+
+/* .loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #e74c3c;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} */
+
+.course-thumbnail {
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.course-thumbnail:hover {
+    transform: scale(1.1);
+    filter: brightness(90%);
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #333;
+    z-index: 1000;
+}
+
+input[type="text"], input[type="email"], textarea {
+    border: 2px solid #ccc;
+    padding: 0.75rem;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e74c3c;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c0392b;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.section-bg {
+    background: linear-gradient(135deg, #f3f4f6, #e74c3c);
+    padding: 2rem;
+    border-radius: 10px;
+}
+nav {
+    position: sticky;
+    top: 0;
+    background: #333;
+    z-index: 1000;
+}
+
+/* Example: Button Microinteraction */
+.pay-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.pay-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(204, 207, 12, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.pay-button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+/* Custom Cursor */
+body {
+    cursor: url('your-cursor.png'), auto;
+}
+
+/* Reveal Animation CSS */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll Animation CSS */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Example: Focus Styles */
+a:focus, button:focus {
+    outline: 2px solid #e74c3c;
+    outline-offset: 2px;
+}
+
+/* 
+Neon Button CSS 
+.neon-button {
+    background-color: #111;
+    border: none;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* .neon-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+    z-index: -1;
+}
+
+.neon-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.neon-button:hover {
+    box-shadow: 0 0 30px #0ff, 0 0 60px #0ff, 0 0 90px #0ff;
+    color: #0ff;
+} */
+
+/* Gradient Button CSS */
+/* .gradient-button {
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #7f00ff, #1cb5e0);
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.5s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-button:hover {
+    background: linear-gradient(45deg, #1cb5e0, #7f00ff, #f06595, #ff6b6b);
+    transform: translateY(-5px);
+} */
+
+/* Frosted Glass Button CSS */
+/* .glass-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.57);
+} */
+
+/* Ripple Effect Button CSS */
+.ripple-button {
+    background-color: #e70d0d;
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ripple-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+.ripple-button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* Text Shadow Button CSS */
+.shadow-text-button {
+    background-color: #2ecc71;
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.shadow-text-button:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Liquid Button CSS */
+.liquid-button {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    border: none;
+    padding: 12px 30px;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s ease;
+}
+
+.liquid-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400%;
+    height: 400%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+    z-index: -1;
+}
+
+.liquid-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.liquid-button:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Split Button CSS */
+.split-button {
+    background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    border: none;
+    padding: 15px 40px;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.split-button::before, .split-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.split-button::before {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.split-button::after {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.split-button:hover::before {
+    transform: translateX(0);
+}
+
+.split-button:hover::after {
+    transform: translateX(0);
+}
+
+
+
+/* Morphing Button CSS */
+.morphing-button {
+    background-color: #f31717;
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.morphing-button:hover {
+    border-radius: 50px;
+    padding: 12px 40px;
+    background-color: #000000;
+}
+
+/* Particle Background CSS */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: auto;
+}
+/* Animated Wave Background CSS */
+.wave-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 200%;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    animation: wave 10s infinite linear;
+}
+
+.wave1 {
+    opacity: 0.6;
+}
+
+.wave2 {
+    opacity: 0.4;
+    animation: wave 15s infinite linear;
+}
+
+.wave3 {
+    opacity: 0.2;
+    animation: wave 20s infinite linear;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Animated Gradient Header CSS */
+header {
+    background: linear-gradient(90deg, #ff8a00, #e52e71, #000000);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Box Shadow Header CSS */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Neon Text Header CSS */
+.neon-header {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+.neon-header h1 {
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 
+        0 0 5px #fff, 
+        0 0 10px #fff, 
+        0 0 20px #ff00ff, 
+        0 0 30px #ff00ff, 
+        0 0 40px #ff00ff, 
+        0 0 50px #030003, 
+        0 0 60px #050105, 
+        0 0 70px #000000;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+            0 0 5px #fff, 
+            0 0 10px #fff, 
+            0 0 20px #000000, 
+            0 0 30px #000000, 
+            0 0 40px #030003, 
+            0 0 50px #0e040e, 
+            0 0 60px #000000, 
+            0 0 70px #000000;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* Wave Animation Header CSS */
+.wave-header {
+    position: relative;
+    background: #ff8a00;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.wave-header h1 {
+    margin: 0;
+}
+
+.wave {
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 50px;
+    background: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+    background-size: cover;
+    animation: wave 10s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Animated Gradient Header CSS */
+header {
+    background: linear-gradient(90deg, #ff8a00, #e52e71, #9b51e0);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: #fff;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Polygon Background CSS */
+#polygon-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+}
+
+/* Parallax Section CSS */
+.parallax {
+    background-image: url('https://www.example.com/your-image.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax .content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Wave Background Section CSS */
+.wave-background {
+    position: relative;
+    background: #ffad14;
+    color: #0e0a0a;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.wave-background::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+    background-size: cover;
+    z-index: -1;
+}
+
+.course {
+    background: #fff;
+    border-radius: 20px; /* Adjust the radius as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px; /* Adjust width as needed */
+    text-align: center;
+    margin-bottom: 5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course {
+    background: #fff;
+    border-radius: 20px; /* Added border-radius */
+    box-shadow: 0 0 10px rgb(236, 9, 9);
+    overflow: hidden;
+    width: 400px; /* Adjust width as needed */
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 5px solid transparent; /* Initial border */
+    animation: borderColorChange 3s infinite; /* Apply animation */
+}
+
+.course:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-container {
+    margin: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #e1e1e1;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    background-color: #f4f4f4;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+}
+#faq {
+    padding: 20px;
+}
+
+#faq-search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: #f8f8f8;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+

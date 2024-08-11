@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soulfull Trader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Uncommented -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
+</head>
+<body>
+    <!-- Polygon Background HTML -->
+    <canvas id="polygon-background"></canvas>
+
+    <header>
+        <div class="header-container">
+            <h1>Soulfull Trading</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <div class="courses-container">
+                <div class="course" data-course="Stock Market Basics" data-price="999">
+                    <img src="Learn (2).png" alt="Stock Market Basics Thumbnail" class="course-thumbnail">
+                    <div class="course-info">
+                        <h3>Stock Market Basics</h3>
+                        <hr>
+                        <p>This course is designed for newcomers who want to learn stock trading from scratch with expert guidance.</p>
+                        <p class="price">
+                            <span class="previous-price">₹6000</span><br>
+                            <span class="current-price">₹999</span>
+                        </p>
+                        <button class="morphing-button">Pay Now</button>
+                        <p class="seats-left">Only 3 seats left</p>
+                        <div class="reviews">
+                            <h4>Reviews (25)</h4>
+                            <p>★★★★★</p>
+                            <hr>
+                            <p>"A fantastic course! Highly recommended."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course" data-course="Option Selling" data-price="4999">
+                    <img src="Learn.jpg" alt="Option Selling Thumbnail" class="course-thumbnail">
+                    <div class="course-info">
+                        <h3>Option Selling</h3>
+                        <hr>
+                        <p>This course offers deep insights and practical knowledge. This is all about option selling, so a minimum of ₹2-3 lakh required.</p>
+                        <p class="price">
+                            <span class="previous-price">₹79,999</span><br>
+                            <span class="current-price">₹4,999</span>
+                        </p>
+                        <button class="morphing-button">Pay Now</button>
+                        <div class="reviews">
+                            <h4>Reviews (1051)</h4>
+                            <p>★★★★☆</p>
+                            <hr>
+                            <p>"Very informative and well-structured."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="course" data-course="Mentorship Program" data-price="24999">
+                    <img src="Learn (4).jpg" alt="Mentorship Program Thumbnail" class="course-thumbnail">
+                    <div class="course-info">
+                        <h3>Mentorship Program</h3>
+                        <hr>
+                        <p>Unlock your trading potential with personalized mentorship from a seasoned trader with over 5-6 years of market experience.</p>
+                        <p class="price">
+                            <span class="previous-price">₹1,00,000</span><br>
+                            <span class="current-price">₹24,999</span>
+                        </p>
+                        <button class="morphing-button">Pay Now</button>
+                        <div class="reviews">
+                            <h4>Reviews (96)</h4>
+                            <p>★★★★★</p>
+                            <hr>
+                            <p>"Good course with practical examples."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-container">
+                <img src="logo.png" alt="About Us Image" class="about-image">
+                <div class="about-info">
+                    <h3>Welcome to Soulfull Trading</h3>
+                    <p>At Soulfull Trading, we are dedicated to helping you become a successful trader. Our mission is to provide high-quality trading education and mentorship to empower traders at all levels. With over 5-6 years of market experience, we offer expertly crafted courses designed to meet your trading needs.</p>
+                    <p>Our courses cover various aspects of trading, from the basics of stock markets to advanced option strategies. We believe in a hands-on approach to learning, ensuring that you gain practical insights and skills that you can apply in real-world trading scenarios.</p>
+                    <p>Join our community today and take the first step towards mastering the financial markets with confidence and knowledge.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">What is Soulfull Trading?</button>
+                    <div class="faq-answer">
+                        <p>Soulfull Trading is a platform dedicated to providing high-quality trading education and mentorship to traders at all levels. Our courses cover various aspects of trading, from the basics to advanced strategies.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How can I enroll in a course?</button>
+                    <div class="faq-answer">
+                        <p>You can enroll in our courses by visiting the Courses section on our website. Select the course you're interested in and click the "Pay Now" button to complete the enrollment process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What payment methods are accepted?</button>
+                    <div class="faq-answer">
+                        <p>We accept various payment methods, including credit/debit cards and digital wallets through Razorpay.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I get a refund if I change my mind?</button>
+                    <div class="faq-answer">
+                        <p>Unfortunately, we do not offer refunds once the payment is completed. Please refer to our Refund Policy for more details.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is it 1-1 Classes?</button>
+                    <div class="faq-answer">
+                        <p>Yes! You will get live classes and 1-to-1 class (only mentorship).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Live Class or Recording?</button>
+                    <div class="faq-answer">
+                        <p>Yes! You will get live classes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-details">
+                <h3>Contact Details</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <strong>Email:</strong> support@soulfulltrader.xyz</li>
+                    <li><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +91 8501061270</li>
+                    <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> All over India Service</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <div class="links">
+            <h3>Useful Links</h3>
+            <p><a href="https://drive.google.com/file/d/14cknb3qhp14-3z1eIfGc9lT07rHOVWYW/view?usp=sharing" target="_blank">Privacy Policy</a></p>
+        </div>
+
+        <div class="terms-link">
+            <p><a href="https://drive.google.com/file/d/14cknb3qhp14-3z1eIfGc9lT07rHOVWYW/view?usp=sharing" target="_blank">Read Terms and Conditions</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SoulfullTrader. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -14,9 +14,9 @@ $(".morphing-button").on("click", function () {
         handler: function (response) {
             // Redirect based on the course purchased
             const redirectUrls = {
-                "Stock Market Basics": "https://t.me/+lg45q5G62-41ZTJl",
-                "Option Selling": "https://t.me/+ahS4FLGKBIo3Yjk1",
-                "Mentorship Program": "https://t.me/+H5htwemrKc0wZGE1"
+                "Stock Market Basics": "https://chat.whatsapp.com/BWC2ZxuRIF27LHWKsf3BQI",
+                "Option Selling": "https://chat.whatsapp.com/EkLM6y2kmwy6AhVrHXl7f8",
+                "Mentorship Program": "https://chat.whatsapp.com/DWe0H6ioYVc4p0IsjJI1tM"
             };
 
             const redirectUrl = redirectUrls[courseName] || "/payerro.html";
